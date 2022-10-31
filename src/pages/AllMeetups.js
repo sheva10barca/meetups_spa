@@ -8,9 +8,7 @@ function AllMeetupsPage() {
 
    useEffect(() => {
       setIsLoading(true);
-      fetch(
-         "https://meetups-ba5ec-default-rtdb.firebaseio.com/meetups.json"
-      )
+      fetch("https://meetups-ba5ec-default-rtdb.firebaseio.com/meetups.json")
          .then((response) => {
             return response.json();
          })
@@ -22,7 +20,6 @@ function AllMeetupsPage() {
                   id: key,
                   ...data[key],
                };
-
                meetups.push(meetup);
             }
 
